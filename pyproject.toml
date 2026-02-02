@@ -1,0 +1,50 @@
+[project]
+name = "price_uncertainty_example"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "marimo>=0.17.8",
+    "matplotlib>=3.10.7",
+    "numpy>=2.3.5",
+    "pandas>=2.3.3",
+    "plotly>=6.4.0",
+    "pyarrow>=22.0.0",
+    "pydantic-settings>=2.12.0",
+    "pyscipopt>=6.0.0",
+    "pytest>=9.0.1",
+    "ruff>=0.14.5",
+    "tqdm>=4.67.2",
+]
+
+[build-system]
+requires = ["uv_build>=0.9.6,<0.10.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 120
+exclude = [
+    "src/local"
+]
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = ["TRY003", "EM101", "D100", "D104", "COM812", "D203", "D213", "ANN204"]
+
+[tool.ruff.lint.extend-per-file-ignores]
+"src/tests/**/*.py" = [
+    "S101",
+    "ARG",
+    "FBT",
+    "PLR2004",
+    "S311",
+    "ANN201",
+    "DTZ001",
+    "D103",
+    "INP001",
+    "ANN001"
+]
+
+[tool.ruff.lint.pylint]
+max-args = 7
