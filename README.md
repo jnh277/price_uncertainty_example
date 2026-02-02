@@ -8,3 +8,5 @@
 2. Download repo
 3. install dependencies with `uv sync --all-extras`
 4. run with `uv run marimo edit notebooks/price_uncertainty_marimo.py`
+
+The example is explained within the marimo notebook
